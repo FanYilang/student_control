@@ -1,0 +1,21 @@
+{% extends "base.html" %}
+
+{% block title %}后台首页{% endblock %}
+
+{% block content %}
+<div class="dashboard-card">
+    <div class="dashboard-header">
+        <div>
+            <p class="eyebrow">Admin Panel</p>
+            <h1>学生信息管理系统</h1>
+            <p class="subtext">当前阶段已完成管理员登录与基础项目初始化。</p>
+        </div>
+        <a href="{{ url_for('logout') }}" class="ghost-button">退出登录</a>
+    </div>
+
+    <div class="welcome-panel">
+        <p>欢迎你，{{ session.get('admin_username') }}。</p>
+        <p>下一步将继续实现学生信息的增删改查、搜索、成绩管理和导出 Excel。</p>
+    </div>
+</div>
+{% endblock %}
